@@ -203,8 +203,17 @@
 
         // Parse initial URL query params or hash
         const urlParams = new URLSearchParams(window.location.search);
+        const collectionGenres = ['action', 'adventure', 'classic', 'platform', 'fighting', 'sports', 'racing', 'shooter', 'rpg', 'horror'];
+        const urlGenre = (urlParams.get('genre') || urlParams.get('collection') || '').toLowerCase();
+        
+        // Canonical SEO Redirection: If user/crawler hits legacy ?genre=, forward directly to dedicated static page
+        if (urlGenre && collectionGenres.includes(urlGenre)) {
+            window.location.replace(`collections/${urlGenre}.html`);
+            return;
+        }
+
         let activeEmulator = (urlParams.get('emulator') || '').toLowerCase();
-        let activeGenre = (urlParams.get('genre') || urlParams.get('collection') || '').toLowerCase();
+        let activeGenre = urlGenre;
 
         // Handle URL Hash (e.g., #ps2, #genre-fighting, #action)
         const hash = (window.location.hash || '').replace('#', '').toLowerCase();
@@ -446,6 +455,84 @@
     }
 
     // ==========================================
+    // 5. Dedicated Collection Pages (Live Search)
+    // ==========================================
+    function initCollectionPage() {
+        const collectionGrid = document.getElementById('collection-games-grid');
+        const searchInput = document.getElementById('collection-search-input');
+        const visibleCountEl = document.getElementById('visible-collection-count');
+        if (!collectionGrid) return;
+
+        const cards = Array.from(collectionGrid.querySelectorAll('.game-card'));
+
+        function filterCollectionCards() {
+            const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const title = (card.getAttribute('data-title') || '').toLowerCase();
+                const emu = (card.getAttribute('data-emulator') || '').toLowerCase();
+                const genre = (card.getAttribute('data-genre') || '').toLowerCase();
+
+                const isMatch = !query || title.includes(query) || emu.includes(query) || genre.includes(query);
+
+                if (isMatch) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (visibleCountEl) {
+                visibleCountEl.textContent = visibleCount;
+            }
+
+            let noResults = document.getElementById('collection-no-results');
+            if (visibleCount === 0) {
+                if (!noResults) {
+                    noResults = document.createElement('div');
+                    noResults.id = 'collection-no-results';
+                    noResults.style.gridColumn = '1 / -1';
+                    noResults.style.textAlign = 'center';
+                    noResults.style.padding = '3.5rem 1rem';
+                    noResults.style.color = '#64748b';
+                    noResults.innerHTML = `
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
+                        <h3 style="font-size: 1.25rem; color: #0f172a; margin-bottom: 0.5rem;">No games found in this collection</h3>
+                        <p style="margin-bottom: 1.25rem;">Try another search term or clear the search field.</p>
+                        <button type="button" id="clear-collection-search" class="btn-primary" style="display: inline-block; cursor: pointer;">Clear Search</button>
+                    `;
+                    collectionGrid.appendChild(noResults);
+
+                    const clearBtn = document.getElementById('clear-collection-search');
+                    if (clearBtn) {
+                        clearBtn.addEventListener('click', () => {
+                            if (searchInput) {
+                                searchInput.value = '';
+                                filterCollectionCards();
+                                searchInput.focus();
+                            }
+                        });
+                    }
+                } else {
+                    noResults.style.display = 'block';
+                }
+            } else if (noResults) {
+                noResults.style.display = 'none';
+            }
+        }
+
+        if (searchInput) {
+            let timer = null;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(timer);
+                timer = setTimeout(filterCollectionCards, 100);
+            });
+        }
+    }
+
+    // ==========================================
     // Lifecycle Dispatcher
     // ==========================================
     function init() {
@@ -453,6 +540,7 @@
         initHomePage();
         initGamesPage();
         initBlogPage();
+        initCollectionPage();
     }
 
     if (document.readyState === 'loading') {
