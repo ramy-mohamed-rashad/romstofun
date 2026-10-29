@@ -87,7 +87,7 @@
 
             const artScore = document.getElementById('art-score');
             if (artScore) {
-                artScore.innerHTML = `${rating} <span style="font-size: 1.2rem; color: #64748b;">/ 5.0</span>`;
+                artScore.innerHTML = `${rating} <span class="score-max">/ 5.0</span>`;
             }
 
             // Sidebar Hardware & Game Specifications
