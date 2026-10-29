@@ -52,15 +52,40 @@
                     clearFiltersBtn.style.display = isFiltering ? 'inline-block' : 'none';
                 }
 
-                // Filter dataset
+                // Filter dataset by emulator & genre/collection
                 let filtered = games.filter(g => {
                     const emuMatch = (selectedEmu === 'all' || (g.emulator || '').toLowerCase() === selectedEmu.toLowerCase());
                     let collMatch = true;
-                    if (selectedColl === 'popular') {
-                        collMatch = (g.loves > 40 || g.rating >= 4.5);
-                    } else if (selectedColl === 'classics') {
-                        collMatch = (g.loves <= 40);
+
+                    if (selectedColl !== 'all') {
+                        const gameGenre = (g.genre || '').toLowerCase();
+                        if (selectedColl === 'action') {
+                            collMatch = gameGenre.includes('action');
+                        } else if (selectedColl === 'adventure') {
+                            collMatch = gameGenre.includes('adventure');
+                        } else if (selectedColl === 'fighting') {
+                            collMatch = gameGenre.includes('fighting') || gameGenre.includes('battle') || gameGenre.includes('wrestling');
+                        } else if (selectedColl === 'sports') {
+                            collMatch = gameGenre.includes('sport') || gameGenre.includes('soccer') || gameGenre.includes('football') || gameGenre.includes('wrestling');
+                        } else if (selectedColl === 'racing') {
+                            collMatch = gameGenre.includes('racing') || gameGenre.includes('driving') || gameGenre.includes('vehicular');
+                        } else if (selectedColl === 'platform') {
+                            collMatch = gameGenre.includes('platform');
+                        } else if (selectedColl === 'rpg' || selectedColl === 'role-playing') {
+                            collMatch = gameGenre.includes('role-playing') || gameGenre.includes('rpg');
+                        } else if (selectedColl === 'shooter') {
+                            collMatch = gameGenre.includes('shooter') || gameGenre.includes('shooting');
+                        } else if (selectedColl === 'horror') {
+                            collMatch = gameGenre.includes('horror') || gameGenre.includes('survival');
+                        } else if (selectedColl === 'classic' || selectedColl === 'classics') {
+                            collMatch = gameGenre.includes('classic') || gameGenre.includes('compilation') || gameGenre.includes('misc') || (g.loves <= 40);
+                        } else if (selectedColl === 'popular') {
+                            collMatch = (g.loves > 40 || g.rating >= 4.5);
+                        } else {
+                            collMatch = gameGenre.includes(selectedColl);
+                        }
                     }
+
                     return emuMatch && collMatch;
                 });
 
