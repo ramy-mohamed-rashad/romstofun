@@ -4,119 +4,131 @@
     "name": "PlayStation 2 (PS2)",
     "code": "PS2",
     "logo": "assets/images/emulators/ps2.svg",
-    "emulatorCount": "4 Emulators",
+    "emulatorCount": "20 Games",
     "downloads": "842,500",
     "isImportant": true,
-    "description": "The best-selling home console of all time with legendary cinematic games."
+    "description": "The best-selling home console of all time with legendary cinematic games.",
+    "gamesCount": "20 Games"
   },
   {
     "id": "psp",
     "name": "PlayStation Portable (PSP)",
     "code": "PSP",
     "logo": "assets/images/emulators/psp.svg",
-    "emulatorCount": "4 Emulators",
+    "emulatorCount": "19 Games",
     "downloads": "780,240",
     "isImportant": true,
-    "description": "Sony's iconic widescreen powerhouse emulator running smoothly on mobile."
+    "description": "Sony's iconic widescreen powerhouse emulator running smoothly on mobile.",
+    "gamesCount": "19 Games"
   },
   {
     "id": "ps3",
     "name": "PlayStation 3 (PS3)",
     "code": "PS3",
     "logo": "assets/images/emulators/ps3.svg",
-    "emulatorCount": "2 Emulators",
+    "emulatorCount": "20 Games",
     "downloads": "410,500",
     "isImportant": true,
-    "description": "High-definition PlayStation generation with RPCS3 mobile & PC."
+    "description": "High-definition PlayStation generation with RPCS3 mobile & PC.",
+    "gamesCount": "20 Games"
   },
   {
     "id": "psx",
     "name": "PlayStation 1 (PSX)",
     "code": "PSX",
     "logo": "assets/images/emulators/psx.svg",
-    "emulatorCount": "4 Emulators",
+    "emulatorCount": "20 Games",
     "downloads": "360,400",
     "isImportant": true,
-    "description": "The 32-bit CD-ROM revolution that gave birth to timeless franchises."
+    "description": "The 32-bit CD-ROM revolution that gave birth to timeless franchises.",
+    "gamesCount": "20 Games"
   },
   {
     "id": "gba",
     "name": "GBA",
     "code": "GBA",
     "logo": "assets/images/emulators/gba.svg",
-    "emulatorCount": "6 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "500,685",
     "isImportant": false,
-    "description": "32-bit portable powerhouse featuring legendary Pokemon and Zelda titles."
+    "description": "32-bit portable powerhouse featuring legendary Pokemon and Zelda titles.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "nes",
     "name": "NES",
     "code": "NES",
     "logo": "assets/images/emulators/nes.svg",
-    "emulatorCount": "5 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "215,900",
     "isImportant": false,
-    "description": "Nintendo Entertainment System & Famicom 8-bit foundational classics."
+    "description": "Nintendo Entertainment System & Famicom 8-bit foundational classics.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "3ds",
     "name": "Nintendo 3DS",
     "code": "3DS",
     "logo": "assets/images/emulators/3ds.svg",
-    "emulatorCount": "3 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "345,120",
     "isImportant": false,
-    "description": "Dual-screen stereoscopic handheld with spectacular 3D adventures."
+    "description": "Dual-screen stereoscopic handheld with spectacular 3D adventures.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "n64",
     "name": "Nintendo 64",
     "code": "N64",
     "logo": "assets/images/emulators/n64.svg",
-    "emulatorCount": "4 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "290,150",
     "isImportant": false,
-    "description": "The pioneer of 3D gaming worlds, analogue control, and 4-player battles."
+    "description": "The pioneer of 3D gaming worlds, analogue control, and 4-player battles.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "nds",
     "name": "Nintendo DS",
     "code": "NDS",
     "logo": "assets/images/emulators/nds.svg",
-    "emulatorCount": "5 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "420,800",
     "isImportant": false,
-    "description": "Dual-screen touch-enabled phenomenon with vast game library."
+    "description": "Dual-screen touch-enabled phenomenon with vast game library.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "snes",
     "name": "Super Nintendo (SNES)",
     "code": "SNES",
     "logo": "assets/images/emulators/snes.svg",
-    "emulatorCount": "5 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "310,200",
     "isImportant": false,
-    "description": "The pinnacle of 16-bit 2D pixel art and legendary chiptune audio."
+    "description": "The pinnacle of 16-bit 2D pixel art and legendary chiptune audio.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "wii",
     "name": "Nintendo Wii",
     "code": "Wii",
     "logo": "assets/images/emulators/wii.svg",
-    "emulatorCount": "2 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "380,900",
     "isImportant": false,
-    "description": "Motion-controlled smash hit offering fun multiplayer and classic adventures."
+    "description": "Motion-controlled smash hit offering fun multiplayer and classic adventures.",
+    "gamesCount": "10 Games"
   },
   {
     "id": "sg",
     "name": "Sega Genesis",
     "code": "SG",
     "logo": "assets/images/emulators/sg.svg",
-    "emulatorCount": "3 Emulators",
+    "emulatorCount": "10 Games",
     "downloads": "195,400",
     "isImportant": false,
-    "description": "16-bit blast processing console famous for Sonic the Hedgehog."
+    "description": "16-bit blast processing console famous for Sonic the Hedgehog.",
+    "gamesCount": "10 Games"
   }
 ]
