@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>romstofun | Best Retro Games & Emulators on Android</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
-    <meta name="description" content="Explore top-rated retro ROMs, discover popular emulators, and find practical guides for Android, PC, and handhelds.">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-    
-    <!-- CSS (Bottom-Up Architecture) -->
+    <title>romstofun - Retro Gaming, Consoles & Emulation Companion</title>
+    <meta name="description" content="Discover 80 classic retro games across PlayStation 2, PSP, PS3, PSX, Nintendo 3DS, GBA, N64 and more. Free community guides and companion tools.">
+    <link rel="canonical" href="https://romstofun.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="romstofun - Retro Gaming, Consoles & Emulation Companion">
+    <meta property="og:description" content="Discover 80 classic retro games across PlayStation 2, PSP, PS3, PSX, Nintendo and classic consoles.">
+    <meta property="og:url" content="https://romstofun.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "romstofun",
+      "url": "https://romstofun.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://romstofun.com/games.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="css/01-variables.css">
     <link rel="stylesheet" href="css/02-reset.css">
     <link rel="stylesheet" href="css/03-typography.css">
@@ -23,50 +33,73 @@
     <link rel="stylesheet" href="css/05-components.css">
 </head>
 <body>
-
-    <!-- HEADER (Primary Color Pink) -->
     <header class="site-header">
         <div class="container flex-between">
-            <a href="index.html" class="logo" aria-label="romstofun home">
-                <span>🎮</span> romstofun<span class="logo-accent">.</span>
+            <a href="index.html" class="brand-logo" aria-label="romstofun Home">
+                <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span class="brand-text">romsto<span class="text-primary">fun</span></span>
             </a>
-            
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
-                <span class="hamburger-icon"></span>
-            </button>
-            
-            <nav class="main-nav" id="mobile-nav" aria-label="Main Navigation">
+
+            <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
                 <ul class="flex-gap">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="games.html" class="">Roms</a></li>
-                    <li><a href="emulators.html" class="">Emulators</a></li>
-                    <li><a href="collections.html" class="">Collections</a></li>
-                    <li><a href="blog.html" class="">Blog</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="games.html" class="nav-link">Roms</a></li>
+                    <li><a href="emulators.html" class="nav-link">Emulators</a></li>
+                    <li><a href="collections.html" class="nav-link">Collections</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
                 </ul>
             </nav>
-            
-            <a href="games.html" class="header-explore-btn">Explore Games &rarr;</a>
+
+            <div class="header-actions">
+                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="header-explore-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                    <span>Get Application</span>
+                </a>
+
+                <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-nav" id="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="games.html" class="mobile-nav-link">Roms</a></li>
+                <li><a href="emulators.html" class="mobile-nav-link">Emulators</a></li>
+                <li><a href="collections.html" class="mobile-nav-link">Collections</a></li>
+                <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION (Full Size) -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container text-center">
-                <span class="accent-subtitle">Level Up Your Mobile Device</span>
-                <h1 id="hero-title">The Best Retro Games for Android</h1>
-                <p>Master mobile emulation. Get expert guides on the best emulators, ROM setups, and graphics optimization.</p>
-                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" class="btn-primary" target="_blank" rel="noopener noreferrer">Get it on Google Play &#8599;</a>
-                <div class="hero-stats">1M+ downloads &bull; <span class="gold-text">&#9733; 4.2 on Google Play</span></div>
+        <!-- HERO -->
+        <section class="hero text-center" aria-labelledby="hero-title">
+            <div class="container hero-content">
+                <span class="badge badge-primary">RETRO GAMING ARCHIVE</span>
+                <h1 id="hero-title">Experience the Golden Era of Gaming</h1>
+                <p class="hero-description">
+                    Explore 80 hand-picked classic retro games and companion guides across PS2, PSP, PS3, PSX, and Nintendo consoles.
+                </p>
+                <div class="hero-buttons">
+                    <a href="games.html" class="btn-primary">Browse All ROMs &rarr;</a>
+                    <a href="emulators.html" class="btn-outline">Explore Emulators</a>
+                </div>
             </div>
         </section>
 
-        <!-- SEARCH & FILTER SECTION (Landing page only) -->
-        <section class="search-section" aria-label="Game Filters">
+        <!-- FILTER CARD -->
+        <section class="search-section" aria-label="Quick Search and Filters">
             <div class="container">
-                <form class="search-card box-shadow" id="filter-form" onsubmit="event.preventDefault();">
-                    <div class="search-header flex-between">
+                <div class="search-card">
+                    <div class="search-header">
                         <div class="search-title">
                             <span class="text-muted text-uppercase text-small">Browse all roms</span>
                             <h2>Find your next game</h2>
@@ -123,11 +156,11 @@
                         <div>Selected filters: <span id="active-filters-display">None</span></div>
                         <button type="button" id="clear-filters-btn" class="btn-text-muted font-bold" style="display: none;">Clear all &times;</button>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
 
-        <!-- POPULAR EMULATORS (Hidden dynamically when filter is selected) -->
+        <!-- POPULAR EMULATORS (4 Columns Full Width) -->
         <section class="emulators-section" id="popular-emulators-section" aria-labelledby="emulators-title">
             <div class="container">
                 <div class="section-header flex-between">
@@ -139,7 +172,7 @@
                 </div>
                 
                 <div class="emulators-grid">
-                    <a href="games.html?emulator=PS2" class="emulator-card" data-emulator="ps2">
+                    <a href="games.html#ps2" class="emulator-card" data-emulator="ps2">
                         <div class="logo-container">
                             <img src="assets/images/emulators/ps2.svg" alt="PlayStation 2 (PS2)" loading="lazy">
                         </div>
@@ -149,7 +182,7 @@
                         <div class="card-stats">
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                20 Games
+                                10 Games
                             </span>
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -157,7 +190,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="games.html?emulator=PSP" class="emulator-card" data-emulator="psp">
+                    <a href="games.html#psp" class="emulator-card" data-emulator="psp">
                         <div class="logo-container">
                             <img src="assets/images/emulators/psp.svg" alt="PlayStation Portable (PSP)" loading="lazy">
                         </div>
@@ -167,7 +200,7 @@
                         <div class="card-stats">
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                19 Games
+                                10 Games
                             </span>
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -175,7 +208,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="games.html?emulator=PS3" class="emulator-card" data-emulator="ps3">
+                    <a href="games.html#ps3" class="emulator-card" data-emulator="ps3">
                         <div class="logo-container">
                             <img src="assets/images/emulators/ps3.svg" alt="PlayStation 3 (PS3)" loading="lazy">
                         </div>
@@ -185,7 +218,7 @@
                         <div class="card-stats">
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                20 Games
+                                10 Games
                             </span>
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -193,7 +226,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="games.html?emulator=PSX" class="emulator-card" data-emulator="psx">
+                    <a href="games.html#psx" class="emulator-card" data-emulator="psx">
                         <div class="logo-container">
                             <img src="assets/images/emulators/psx.svg" alt="PlayStation 1 (PSX)" loading="lazy">
                         </div>
@@ -203,7 +236,7 @@
                         <div class="card-stats">
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                20 Games
+                                10 Games
                             </span>
                             <span class="stat-badge">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -215,24 +248,23 @@
             </div>
         </section>
 
-        <!-- EXPLORE GAMES LIBRARY -->
+        <!-- EXPLORE GAMES LIBRARY (12 Pre-rendered Cards) -->
         <section class="games-section" aria-labelledby="games-title">
             <div class="container">
                 <div class="section-header flex-between">
                     <div>
-                        <span class="text-muted text-uppercase text-small">The Game Library</span>
-                        <h2 id="games-title">Explore Game Guides</h2>
-                        <p class="text-muted">Top rated retro titles for your Android device</p>
+                        <span class="text-muted text-uppercase text-small">Featured Retro Highlights</span>
+                        <h2 id="games-title">Top Community Rated Games</h2>
                     </div>
-                    <a href="games.html" class="link-forward">Browse all 240+ games &rarr;</a>
+                    <a href="games.html" class="link-forward">Browse all 80 games &rarr;</a>
                 </div>
 
                 <div class="games-grid" id="games-container">
-                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action adventure" data-type="guide">
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action adventure" data-title="grand theft auto v legacy">
                         <div class="image-wrapper">
                             <span class="tag-emulator">PS2</span>
                             
-                            <img src="assets/images/games/ps2_171968_grand-theft-auto-v-legacy.jpg" alt="Grand Theft Auto V Legacy" loading="lazy">
+                            <img src="assets/images/games/ps2_171968_grand-theft-auto-v-legacy.jpg" alt="Grand Theft Auto V Legacy" loading="lazy" decoding="async">
                         </div>
                         <div class="card-body">
                             <h3 class="game-title" title="Grand Theft Auto V Legacy">Grand Theft Auto V Legacy</h3>
@@ -259,11 +291,290 @@
                             </a>
                         </div>
                     </article>
-                    <article class="game-card" data-emulator="psp" data-collection="popular" data-genre="sports" data-type="guide">
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action" data-title="grand theft auto san andreas">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            <span class="tag-year">2019</span>
+                            <img src="assets/images/games/ps2_157491_grand-theft-auto-san-andreas.jpg" alt="grand Theft Auto San Andreas" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="grand Theft Auto San Andreas">grand Theft Auto San Andreas</h3>
+                            <span class="game-genre">Action</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.59
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    2,587
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    135,987
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action" data-title="god of war ii 20 anos ia remaster br">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            <span class="tag-year">2025</span>
+                            <img src="assets/images/games/ps2_157796_god-of-war-ii-20-anos-ia-remaster-br.jpg" alt="GOD OF WAR II 20 Anos IA Remaster BR" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="GOD OF WAR II 20 Anos IA Remaster BR">GOD OF WAR II 20 Anos IA Remaster BR</h3>
+                            <span class="game-genre">Action</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.64
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,869
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    121,537
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action adventure" data-title="grand theft auto san andreas dyom">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            
+                            <img src="assets/images/games/ps2_154085_grand-theft-auto-san-andreas-dyom.jpg" alt="grand Theft Auto San Andreas Dyom" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="grand Theft Auto San Andreas Dyom">grand Theft Auto San Andreas Dyom</h3>
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.44
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,591
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    92,874
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="sport" data-title="efootball 2026">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            
+                            <img src="assets/images/games/ps2_157812_efootball-2026.jpg" alt="eFootball 2026" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="eFootball 2026">eFootball 2026</h3>
+                            <span class="game-genre">Sport</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.48
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,464
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    91,691
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="role-playing" data-title="god of war ii">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            <span class="tag-year">2007</span>
+                            <img src="assets/images/games/ps2_171836_god-of-war-ii.jpg" alt="God of War II" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="God of War II">God of War II</h3>
+                            <span class="game-genre">Role-Playing</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.56
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,427
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    75,816
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action adventure" data-title="grand theft auto vi vice city">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            
+                            <img src="assets/images/games/ps2_173347_grand-theft-auto-vi-vice-city.jpg" alt="Grand Theft Auto VI Vice City" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="Grand Theft Auto VI Vice City">Grand Theft Auto VI Vice City</h3>
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.50
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,378
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    59,754
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action adventure" data-title="gta san andreas definitive edition">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            
+                            <img src="assets/images/games/ps2_171879_gta-san-andreas-definitive-edition.jpg" alt="GTA San Andreas Definitive Edition" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="GTA San Andreas Definitive Edition">GTA San Andreas Definitive Edition</h3>
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.69
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,259
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    54,996
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="action, adventure" data-title="gta v legacy">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            
+                            <img src="assets/images/games/ps2_161503_gta-v-legacy.jpg" alt="GTA V Legacy" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="GTA V Legacy">GTA V Legacy</h3>
+                            <span class="game-genre">Action, Adventure</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.84
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,254
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    64,871
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="ps2" data-collection="popular" data-genre="racing" data-title="downhill domination">
+                        <div class="image-wrapper">
+                            <span class="tag-emulator">PS2</span>
+                            <span class="tag-year">2003</span>
+                            <img src="assets/images/games/ps2_171840_downhill-domination.jpg" alt="Downhill Domination" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="game-title" title="Downhill Domination">Downhill Domination</h3>
+                            <span class="game-genre">Racing</span>
+                            <div class="game-meta">
+                                <span class="meta-rating" title="Rating">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    4.55
+                                </span>
+                                <span class="meta-loves" title="Loves / Fans">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                                    1,184
+                                </span>
+                                <span class="meta-downloads" title="Downloads / Players">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    53,574
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                                Get on Google Play &#8599;
+                            </a>
+                        </div>
+                    </article>
+                    <article class="game-card" data-emulator="psp" data-collection="popular" data-genre="sports" data-title="efootball 2027">
                         <div class="image-wrapper">
                             <span class="tag-emulator">PSP</span>
                             <span class="tag-year">2026</span>
-                            <img src="assets/images/games/psp_176802_efootball-2027.png" alt="EFootball 2027" loading="lazy">
+                            <img src="assets/images/games/psp_176802_efootball-2027.png" alt="EFootball 2027" loading="lazy" decoding="async">
                         </div>
                         <div class="card-body">
                             <h3 class="game-title" title="EFootball 2027">EFootball 2027</h3>
@@ -290,306 +601,27 @@
                             </a>
                         </div>
                     </article>
-                    <article class="game-card" data-emulator="ps3" data-collection="popular" data-genre="classic" data-type="guide">
+                    <article class="game-card" data-emulator="psp" data-collection="popular" data-genre="action" data-title="god of war - ghost of sparta">
                         <div class="image-wrapper">
-                            <span class="tag-emulator">PS3</span>
-                            <span class="tag-year">2004</span>
-                            <img src="assets/images/games/ps3_164524_grand-theft-auto-san-andreas.webp" alt="Grand Theft Auto - San Andreas" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="Grand Theft Auto - San Andreas">Grand Theft Auto - San Andreas</h3>
-                            <span class="game-genre">Classic</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    4.56
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    4,828
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    175,219
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="psx" data-collection="popular" data-genre="action, adventure, horror" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">PSX</span>
-                            <span class="tag-year">1999</span>
-                            <img src="assets/images/games/psx_158088_resident-evil-3-nemesis.jpg" alt="Resident Evil 3 - Nemesis" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="Resident Evil 3 - Nemesis">Resident Evil 3 - Nemesis</h3>
-                            <span class="game-genre">Action, Adventure, Horror</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    4.64
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    287
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    12,803
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="gba" data-collection="popular" data-genre="action, adventure" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">GBA</span>
-                            
-                            <img src="assets/images/games/gba_159333_dragon-drive-cezar-j.jpg" alt="Dragon Drive (Cezar) (J)" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="Dragon Drive (Cezar) (J)">Dragon Drive (Cezar) (J)</h3>
-                            <span class="game-genre">Action, Adventure</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    4.57
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    142
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    5,880
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="nes" data-collection="popular" data-genre="action, adventure" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">NES</span>
-                            <span class="tag-year">1986</span>
-                            <img src="assets/images/games/nes_159137_vs-super-mario-bros-vs.jpg" alt="VS Super Mario Bros (VS)" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="VS Super Mario Bros (VS)">VS Super Mario Bros (VS)</h3>
-                            <span class="game-genre">Action, Adventure</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    5.00
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    112
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    4,224
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="3ds" data-collection="popular" data-genre="third-person shooter" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">3DS</span>
-                            <span class="tag-year">2012</span>
-                            <img src="assets/images/games/3ds_164714_the-amazing-spider-man.webp" alt="The Amazing Spider-Man" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="The Amazing Spider-Man">The Amazing Spider-Man</h3>
-                            <span class="game-genre">Third-person shooter</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    4.78
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    242
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    12,027
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="n64" data-collection="popular" data-genre="adventure" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">N64</span>
-                            <span class="tag-year">2000</span>
-                            <img src="assets/images/games/n64_162471_spider-man.jpg" alt="Spider-Man" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="Spider-Man">Spider-Man</h3>
-                            <span class="game-genre">Adventure</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    3.63
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    125
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    8,239
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="nds" data-collection="popular" data-genre="action, battle, shooter" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">NDS</span>
+                            <span class="tag-emulator">PSP</span>
                             <span class="tag-year">2010</span>
-                            <img src="assets/images/games/nds_163800_call-of-duty-black-ops-f.jpg" alt="Call Of Duty - Black Ops (F)" loading="lazy">
+                            <img src="assets/images/games/psp_153464_god-of-war-ghost-of-sparta.webp" alt="God Of War - Ghost Of Sparta" loading="lazy" decoding="async">
                         </div>
                         <div class="card-body">
-                            <h3 class="game-title" title="Call Of Duty - Black Ops (F)">Call Of Duty - Black Ops (F)</h3>
-                            <span class="game-genre">Action, Battle, Shooter</span>
+                            <h3 class="game-title" title="God Of War - Ghost Of Sparta">God Of War - Ghost Of Sparta</h3>
+                            <span class="game-genre">Action</span>
                             <div class="game-meta">
                                 <span class="meta-rating" title="Rating">
                                     <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    5.00
+                                    4.65
                                 </span>
                                 <span class="meta-loves" title="Loves / Fans">
                                     <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    148
+                                    1,947
                                 </span>
                                 <span class="meta-downloads" title="Downloads / Players">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    6,908
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="snes" data-collection="popular" data-genre="adventure" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">SNES</span>
-                            <span class="tag-year">1990</span>
-                            <img src="assets/images/games/snes_166484_super-mario-world.jpg" alt="Super Mario World" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="Super Mario World">Super Mario World</h3>
-                            <span class="game-genre">Adventure</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    4.30
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    95
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    4,645
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="wii" data-collection="popular" data-genre="action, adventure" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">Wii</span>
-                            <span class="tag-year">2007</span>
-                            <img src="assets/images/games/wii_161253_the-amazing-spiderman.webp" alt="The Amazing Spiderman" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="The Amazing Spiderman">The Amazing Spiderman</h3>
-                            <span class="game-genre">Action, Adventure</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    4.64
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    855
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    41,746
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-game-app">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                                Get on Google Play &#8599;
-                            </a>
-                        </div>
-                    </article>
-                    <article class="game-card" data-emulator="sg" data-collection="classics" data-genre="classic" data-type="guide">
-                        <div class="image-wrapper">
-                            <span class="tag-emulator">SG</span>
-                            <span class="tag-year">1991</span>
-                            <img src="assets/images/games/sg_165004_home-alone.png" alt="Home Alone" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="game-title" title="Home Alone">Home Alone</h3>
-                            <span class="game-genre">Classic</span>
-                            <div class="game-meta">
-                                <span class="meta-rating" title="Rating">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    3.92
-                                </span>
-                                <span class="meta-loves" title="Loves / Fans">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    37
-                                </span>
-                                <span class="meta-downloads" title="Downloads / Players">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                    1,913
+                                    132,712
                                 </span>
                             </div>
                         </div>
@@ -603,55 +635,66 @@
                 </div>
 
                 <div class="text-center" style="margin-top: 3rem;">
-                    <a href="games.html" class="btn-primary">View Full ROMs Library (159 Games) &rarr;</a>
+                    <a href="games.html" class="btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">
+                        View All 80 Games Library &rarr;
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- SIMPLIFIED FOOTER (Primary Color Pink - NO Fake Links) -->
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-simple-top">
-                <div class="footer-simple-brand">
-                    <a href="index.html" class="footer-brand-logo">
-                        <span>🎮</span> romstofun<span class="brand-highlight">.</span>
-                    </a>
-                    <p class="footer-simple-desc">Your ultimate retro gaming & mobile emulation companion guide.</p>
-                </div>
-                
-                <ul class="footer-simple-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="games.html">Roms</a></li>
-                    <li><a href="emulators.html">Emulators</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-
-                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="footer-simple-cta">
-                    Get App on Google Play &#8599;
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-logo" aria-label="romstofun Home">
+                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span class="brand-text">romsto<span class="text-primary">fun</span></span>
                 </a>
+                <p class="footer-tagline">Your high-performance retro gaming and mobile emulation companion hub.</p>
+                <div class="footer-app-btn">
+                    <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-footer-app">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
+                        Get Companion App
+                    </a>
+                </div>
             </div>
 
-            <div class="footer-simple-bottom">
-                <div>&copy; 2026 romstofun. All rights reserved. Independent retro gaming educational companion.</div>
-                <div>Game titles, characters, and trademarks belong to their respective copyright owners.</div>
+            <div class="footer-nav">
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">ROMs & Games</a></li>
+                    <li><a href="emulators.html">Active Emulators</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="blog.html">Blog & Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-disclaimer">
+                <h4 class="footer-heading">Legal & Compliance</h4>
+                <p class="legal-text">
+                    romstofun is a preservation indexing resource and community database. No copyrighted game ROM binaries are stored, hosted, or directly transmitted from our servers. All companion tools point to verified applications available on the Google Play Store.
+                </p>
+                <div class="footer-meta-pill">
+                    <span>100% Static HTML</span>
+                    <span>SEO Ready</span>
+                    <span>Nginx Optimized</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <p>&copy; 2026 romstofun. All rights reserved.</p>
+                <p>Designed for fast retro exploration.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Application Data & Clean Architecture Modules -->
-    <script src="assets/data/games_data.js"></script>
-    <script src="js/core/config.js"></script>
-    <script src="js/core/utils.js"></script>
-    <script src="js/core/dataService.js"></script>
-    <script src="js/components/navigation.js"></script>
-    <script src="js/components/gameCard.js"></script>
-    <script src="js/components/blogCard.js"></script>
-    <script src="js/pages/homePage.js"></script>
-    <script src="js/pages/gamesPage.js"></script>
-    <script src="js/pages/blogPage.js"></script>
-    <script src="js/pages/blogDetail.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
