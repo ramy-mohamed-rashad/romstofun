@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="100%" height="100%">
+  <g transform="translate(150, 85)" text-anchor="middle">
+    <text y="10" font-family="'Century Gothic', 'Arial', sans-serif" font-size="64" font-weight="300" fill="#374151" letter-spacing="2">Wii</text>
+    <circle cx="-6" cy="-35" r="6" fill="#00a0e9"/>
+    <circle cx="16" cy="-35" r="6" fill="#00a0e9"/>
+    <text y="42" font-family="sans-serif" font-size="12" font-weight="700" fill="#9ca3af" letter-spacing="4">NINTENDO</text>
+  </g>
+</svg>

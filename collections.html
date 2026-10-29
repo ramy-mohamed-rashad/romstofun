@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Game Collections | romstofun</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    <meta name="description" content="Explore curated retro game collections by genre. Browse Action, Adventure, Fighting, Sports, Racing, RPG, and more.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS (Bottom-Up Architecture) -->
+    <link rel="stylesheet" href="css/01-variables.css">
+    <link rel="stylesheet" href="css/02-reset.css">
+    <link rel="stylesheet" href="css/03-typography.css">
+    <link rel="stylesheet" href="css/04-layout.css">
+    <link rel="stylesheet" href="css/05-components.css">
+</head>
+<body>
+
+    <!-- HEADER (Primary Color Pink) -->
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="index.html" class="logo" aria-label="romstofun home">
+                <span>🎮</span> romstofun<span class="logo-accent">.</span>
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+            
+            <nav class="main-nav" id="mobile-nav" aria-label="Main Navigation">
+                <ul class="flex-gap">
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="games.html" class="">Roms</a></li>
+                    <li><a href="emulators.html" class="">Emulators</a></li>
+                    <li><a href="collections.html" class="active">Collections</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <a href="games.html" class="header-explore-btn">Explore Games &rarr;</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- COMPACT HERO SECTION -->
+        <section class="hero hero-compact" aria-labelledby="collections-page-title">
+            <div class="container text-center">
+                <div class="hero-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span>Collections</span>
+                </div>
+                <h1 id="collections-page-title">Game Collections</h1>
+                <p>Browse our curated retro game collections categorized by gameplay genre, themes, and battle styles.</p>
+            </div>
+        </section>
+
+        <!-- COLLECTIONS GRID -->
+        <section class="collections-page-section">
+            <div class="container">
+                <div class="section-header flex-between" style="margin-bottom: 1.5rem;">
+                    <div>
+                        <span class="text-muted text-uppercase text-small">Categories & Themes</span>
+                        <h2>Browse by Genre (10)</h2>
+                    </div>
+                    <a href="games.html" class="link-forward">Browse all games &rarr;</a>
+                </div>
+
+                <div class="collections-grid">
+                    <a href="games.html?genre=Action" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/3ds_164714_the-amazing-spider-man.webp" alt="Action" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">⚔️</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Action</h3>
+                                <span class="count-pill">131 Games</span>
+                            </div>
+                            <p>Fast-paced adventures, legendary superhero sagas, and intense hack-and-slash showdowns.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Adventure" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/3ds_164731_the-legend-of-zelda-ocarina-of-time.webp" alt="Adventure" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🗺️</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Adventure</h3>
+                                <span class="count-pill">101 Games</span>
+                            </div>
+                            <p>Grand exploration journeys, puzzle dungeons, and timeless mythological stories.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Fighting" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/snes_165321_mortal-kombat-ii-anthrox-beta-hack.jpg" alt="Fighting &amp; Battle" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🥊</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Fighting &amp; Battle</h3>
+                                <span class="count-pill">42 Games</span>
+                            </div>
+                            <p>Legendary arcade martial arts, Mortal Kombat tournaments, and Dragon Ball super brawls.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Sports" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/wii_161258_wwe-12.webp" alt="Sports &amp; Soccer" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">⚽</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Sports &amp; Soccer</h3>
+                                <span class="count-pill">28 Games</span>
+                            </div>
+                            <p>World cup football tournaments, FIFA leagues, and high-flying WWE wrestling action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Racing" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/3ds_164735_mario-kart-7.webp" alt="Racing &amp; Driving" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🏎️</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Racing &amp; Driving</h3>
+                                <span class="count-pill">13 Games</span>
+                            </div>
+                            <p>High-octane drift tracks, city highway racers, and iconic Mario Kart Grand Prix battles.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Platform" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/snes_166484_super-mario-world.jpg" alt="Platformers" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🍄</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Platformers</h3>
+                                <span class="count-pill">14 Games</span>
+                            </div>
+                            <p>Side-scrolling jump-and-run classics featuring Super Mario, Sonic, and Crash Bandicoot.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Shooter" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/wii_161263_call-of-duty-modern-warfare-3.webp" alt="Shooter &amp; Combat" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🎯</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Shooter &amp; Combat</h3>
+                                <span class="count-pill">11 Games</span>
+                            </div>
+                            <p>Tactical third-person combat, military operations, and run-and-gun warfare.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Role-Playing" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/3ds_164739_pokemon-x.webp" alt="Role-Playing (RPG)" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🔮</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Role-Playing (RPG)</h3>
+                                <span class="count-pill">9 Games</span>
+                            </div>
+                            <p>Deep character journeys, monster training adventures, and legendary turn-based quests.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Horror" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/wii_161261_resident-evil-4.webp" alt="Horror &amp; Survival" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🧟</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Horror &amp; Survival</h3>
+                                <span class="count-pill">6 Games</span>
+                            </div>
+                            <p>Chilling survival campaigns, zombie outbreaks, and Resident Evil atmospheric terror.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?genre=Classic" class="collection-card">
+                        <div class="collection-header">
+                            <img src="assets/images/games/snes_166475_super-mario-all-stars-super-mario-world.jpg" alt="Classic Hits" class="collection-header-img" loading="lazy">
+                            <div class="collection-icon-badge">🕹️</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="title-row">
+                                <h3>Classic Hits</h3>
+                                <span class="count-pill">35 Games</span>
+                            </div>
+                            <p>Golden age compilation cartridges, arcade nostalgia, and retro multi-in-1 staples.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="btn-explore-collection">
+                                Explore Collection
+                                <span>&rarr;</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SIMPLIFIED FOOTER (Primary Color Pink - NO Fake Links) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-simple-top">
+                <div class="footer-simple-brand">
+                    <a href="index.html" class="footer-brand-logo">
+                        <span>🎮</span> romstofun<span class="brand-highlight">.</span>
+                    </a>
+                    <p class="footer-simple-desc">Your ultimate retro gaming & mobile emulation companion guide.</p>
+                </div>
+                
+                <ul class="footer-simple-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Roms</a></li>
+                    <li><a href="emulators.html">Emulators</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+
+                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="footer-simple-cta">
+                    Get App on Google Play &#8599;
+                </a>
+            </div>
+
+            <div class="footer-simple-bottom">
+                <div>&copy; 2026 romstofun. All rights reserved. Independent retro gaming educational companion.</div>
+                <div>Game titles, characters, and trademarks belong to their respective copyright owners.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Data & Clean Architecture Modules -->
+    <script src="assets/data/games_data.js"></script>
+    <script src="js/core/config.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/dataService.js"></script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/gameCard.js"></script>
+    <script src="js/components/blogCard.js"></script>
+    <script src="js/pages/homePage.js"></script>
+    <script src="js/pages/gamesPage.js"></script>
+    <script src="js/pages/blogPage.js"></script>
+    <script src="js/pages/blogDetail.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

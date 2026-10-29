@@ -1,0 +1,27 @@
+:root {
+    /* Color Palette */
+    --clr-primary: #eb235f;
+    --clr-accent: #4ade80;
+    --clr-bg-light: #f8f9fa;
+    --clr-card-bg: #ffffff;
+    
+    /* Text Colors */
+    --clr-text-main: #1f2937;
+    --clr-text-muted: #767e8d;
+    --clr-text-light: #ffffff;
+    
+    /* Typography */
+    --font-main: 'DM Sans', system-ui, sans-serif;
+    
+    /* Spacing & Layout */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    --container-max: 1200px;
+    
+    /* Borders & Shadows */
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

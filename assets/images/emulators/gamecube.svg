@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="100%" height="100%">
+  <g transform="translate(30, 42)">
+    <!-- Isometric Cube / G Logo -->
+    <g transform="translate(20, 36) scale(0.68)">
+      <polygon points="40,5 75,25 75,65 40,85 5,65 5,25" fill="none" stroke="#111827" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M40 5 L40 45 L75 65 M40 45 L5 65" fill="none" stroke="#111827" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="25,36 40,28 55,36 40,44" fill="#111827"/>
+    </g>
+    <text x="95" y="30" font-family="sans-serif" font-size="14" font-weight="800" fill="#111827" letter-spacing="5">NINTENDO</text>
+    <text x="95" y="58" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#111827" letter-spacing="2">GAMECUBE<tspan font-size="10" dy="-10">™</tspan></text>
+  </g>
+</svg>

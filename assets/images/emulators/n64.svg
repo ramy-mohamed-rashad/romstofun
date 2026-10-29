@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="100%" height="100%">
+  <g transform="translate(40, 50)">
+    <!-- 3D N64 N shape -->
+    <g transform="translate(15, 30) scale(0.8)">
+      <polygon points="10,5 20,0 20,50 10,55" fill="#111827"/>
+      <polygon points="20,0 32,25 42,20 20,0" fill="#374151"/>
+      <polygon points="42,20 42,70 32,75 32,25" fill="#111827"/>
+      <polygon points="10,55 32,75 32,65 10,45" fill="#4b5563"/>
+      <polygon points="22,15 44,35 54,30 32,10" fill="#1f2937"/>
+      <polygon points="44,35 44,85 54,80 54,30" fill="#111827"/>
+    </g>
+    <!-- Text -->
+    <text x="78" y="38" font-family="'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#111827" letter-spacing="3">NINTENDO<tspan font-size="26">64</tspan></text>
+  </g>
+</svg>

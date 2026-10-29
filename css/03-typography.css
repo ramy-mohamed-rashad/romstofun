@@ -1,0 +1,77 @@
+/* 03-typography.css */
+
+
+body {
+    font-family: var(--font-main);
+    color: var(--clr-text-main);
+    background-color: var(--clr-bg-light);
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem); 
+    margin-bottom: var(--space-sm); 
+    color: var(--clr-text-light);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: var(--space-sm);
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.text-center { 
+    text-align: center; 
+}
+
+.text-muted { 
+    color: var(--clr-text-muted); 
+    font-size: 0.9rem;
+}
+
+.text-small { 
+    font-size: 0.85rem; 
+}
+
+.text-uppercase { 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.font-bold { 
+    font-weight: 700; 
+}
+
+.accent-subtitle {
+    color: var(--clr-accent);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        margin-bottom: var(--space-md);/
+    }
+    
+    .accent-subtitle {
+        font-size: 0.85rem;
+    }
+}

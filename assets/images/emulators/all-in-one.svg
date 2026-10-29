@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="100%" height="100%">
+  <g fill="none" stroke="#111827" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="translate(60, 20) scale(0.6)">
+    <!-- Controller Body Outline -->
+    <path d="M80 60 C45 60 15 95 15 145 C15 190 40 240 80 240 C105 240 120 215 135 195 C145 180 155 180 165 195 C180 215 195 240 220 240 C260 240 285 190 285 145 C285 95 255 60 220 60 Z"/>
+    <!-- D-pad -->
+    <path d="M80 115 L80 165 M55 140 L105 140" stroke-width="10"/>
+    <!-- Buttons -->
+    <circle cx="205" cy="120" r="8" fill="#111827" stroke="none"/>
+    <circle cx="235" cy="140" r="8" fill="#111827" stroke="none"/>
+    <circle cx="205" cy="160" r="8" fill="#111827" stroke="none"/>
+    <circle cx="175" cy="140" r="8" fill="#111827" stroke="none"/>
+  </g>
+</svg>

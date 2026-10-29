@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Retro Console Emulators | romstofun</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    <meta name="description" content="Discover top retro gaming emulators with available games for Android, PC, and handhelds. Click any emulator to browse its complete library of classic games.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS (Bottom-Up Architecture) -->
+    <link rel="stylesheet" href="css/01-variables.css">
+    <link rel="stylesheet" href="css/02-reset.css">
+    <link rel="stylesheet" href="css/03-typography.css">
+    <link rel="stylesheet" href="css/04-layout.css">
+    <link rel="stylesheet" href="css/05-components.css">
+</head>
+<body>
+
+    <!-- HEADER (Primary Color Pink) -->
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="index.html" class="logo" aria-label="romstofun home">
+                <span>🎮</span> romstofun<span class="logo-accent">.</span>
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+            
+            <nav class="main-nav" id="mobile-nav" aria-label="Main Navigation">
+                <ul class="flex-gap">
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="games.html" class="">Roms</a></li>
+                    <li><a href="emulators.html" class="active">Emulators</a></li>
+                    <li><a href="collections.html" class="">Collections</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <a href="games.html" class="header-explore-btn">Explore Games &rarr;</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- COMPACT HERO SECTION (No Filters) -->
+        <section class="hero hero-compact" aria-labelledby="emulators-page-title">
+            <div class="container text-center">
+                <div class="hero-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span>Emulators</span>
+                </div>
+                <h1 id="emulators-page-title">Retro Console Emulators</h1>
+                <p>Choose a console below to discover its dedicated emulators and browse all compatible games and ROMs.</p>
+            </div>
+        </section>
+
+        <!-- ALL EMULATORS GRID (Only Emulators with Data - No See More Button) -->
+        <section class="emulators-page-section">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 1.5rem;">
+                    <div>
+                        <span class="text-muted text-uppercase text-small">Supported Consoles with Available Games</span>
+                        <h2>Active Emulators (12)</h2>
+                    </div>
+                </div>
+
+                <div class="emulators-grid">
+                    <a href="games.html?emulator=PS2" class="emulator-card" data-emulator="ps2">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/ps2.svg" alt="PlayStation 2 (PS2)" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>PlayStation 2 (PS2)</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                4 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                842,500
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=PSP" class="emulator-card" data-emulator="psp">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/psp.svg" alt="PlayStation Portable (PSP)" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>PlayStation Portable (PSP)</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                4 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                780,240
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=PS3" class="emulator-card" data-emulator="ps3">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/ps3.svg" alt="PlayStation 3 (PS3)" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>PlayStation 3 (PS3)</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                2 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                410,500
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=PSX" class="emulator-card" data-emulator="psx">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/psx.svg" alt="PlayStation 1 (PSX)" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>PlayStation 1 (PSX)</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                4 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                360,400
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=GBA" class="emulator-card" data-emulator="gba">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/gba.svg" alt="GBA" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>GBA</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                6 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                500,685
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=NES" class="emulator-card" data-emulator="nes">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/nes.svg" alt="NES" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>NES</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                5 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                215,900
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=3DS" class="emulator-card" data-emulator="3ds">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/3ds.svg" alt="Nintendo 3DS" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Nintendo 3DS</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                3 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                345,120
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=N64" class="emulator-card" data-emulator="n64">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/n64.svg" alt="Nintendo 64" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Nintendo 64</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                4 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                290,150
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=NDS" class="emulator-card" data-emulator="nds">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/nds.svg" alt="Nintendo DS" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Nintendo DS</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                5 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                420,800
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=SNES" class="emulator-card" data-emulator="snes">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/snes.svg" alt="Super Nintendo (SNES)" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Super Nintendo (SNES)</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                5 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                310,200
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=Wii" class="emulator-card" data-emulator="wii">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/wii.svg" alt="Nintendo Wii" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Nintendo Wii</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                2 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                380,900
+                            </span>
+                        </div>
+                    </a>
+                    <a href="games.html?emulator=SG" class="emulator-card" data-emulator="sg">
+                        <div class="logo-container">
+                            <img src="assets/images/emulators/sg.svg" alt="Sega Genesis" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Sega Genesis</h3>
+                        </div>
+                        <div class="card-stats">
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                3 Emulators
+                            </span>
+                            <span class="stat-badge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                195,400
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SIMPLIFIED FOOTER (Primary Color Pink - NO Fake Links) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-simple-top">
+                <div class="footer-simple-brand">
+                    <a href="index.html" class="footer-brand-logo">
+                        <span>🎮</span> romstofun<span class="brand-highlight">.</span>
+                    </a>
+                    <p class="footer-simple-desc">Your ultimate retro gaming & mobile emulation companion guide.</p>
+                </div>
+                
+                <ul class="footer-simple-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Roms</a></li>
+                    <li><a href="emulators.html">Emulators</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+
+                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="footer-simple-cta">
+                    Get App on Google Play &#8599;
+                </a>
+            </div>
+
+            <div class="footer-simple-bottom">
+                <div>&copy; 2026 romstofun. All rights reserved. Independent retro gaming educational companion.</div>
+                <div>Game titles, characters, and trademarks belong to their respective copyright owners.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Data & Clean Architecture Modules -->
+    <script src="assets/data/games_data.js"></script>
+    <script src="js/core/config.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/dataService.js"></script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/gameCard.js"></script>
+    <script src="js/components/blogCard.js"></script>
+    <script src="js/pages/homePage.js"></script>
+    <script src="js/pages/gamesPage.js"></script>
+    <script src="js/pages/blogPage.js"></script>
+    <script src="js/pages/blogDetail.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
