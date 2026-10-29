@@ -278,13 +278,22 @@
             });
         }
 
-        if (searchClear && searchInput) {
-            searchClear.addEventListener('click', function() {
+        const btnClearSearch = document.getElementById('btn-clear-search');
+
+        function doClearSearch() {
+            if (searchInput) {
                 searchInput.value = '';
-                searchClear.style.display = 'none';
+                if (searchClear) searchClear.style.display = 'none';
                 filterGames();
                 searchInput.focus();
-            });
+            }
+        }
+
+        if (searchClear) {
+            searchClear.addEventListener('click', doClearSearch);
+        }
+        if (btnClearSearch) {
+            btnClearSearch.addEventListener('click', doClearSearch);
         }
 
         // Popstate handler for browser back/forward buttons

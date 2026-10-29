@@ -33,65 +33,41 @@
     <link rel="stylesheet" href="css/05-components.css">
 </head>
 <body>
+        <!-- HEADER (Primary Color Pink) -->
     <header class="site-header">
         <div class="container flex-between">
-            <a href="index.html" class="brand-logo" aria-label="romstofun Home">
-                <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-                <span class="brand-text">romsto<span class="text-primary">fun</span></span>
+            <a href="index.html" class="logo" aria-label="romstofun home">
+                <span>🎮</span> romstofun<span class="logo-accent">.</span>
             </a>
-
-            <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger-icon"></span>
+            </button>
+            
+            <nav class="main-nav" id="mobile-nav" aria-label="Main Navigation">
                 <ul class="flex-gap">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="games.html" class="nav-link">Roms</a></li>
-                    <li><a href="emulators.html" class="nav-link">Emulators</a></li>
-                    <li><a href="collections.html" class="nav-link">Collections</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="games.html" class="">Roms</a></li>
+                    <li><a href="emulators.html" class="">Emulators</a></li>
+                    <li><a href="collections.html" class="">Collections</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
                 </ul>
             </nav>
-
-            <div class="header-actions">
-                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="header-explore-btn">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                    <span>Get Application</span>
-                </a>
-
-                <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
-        </div>
-
-        <div class="mobile-nav" id="mobile-nav">
-            <ul class="mobile-nav-list">
-                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-                <li><a href="games.html" class="mobile-nav-link">Roms</a></li>
-                <li><a href="emulators.html" class="mobile-nav-link">Emulators</a></li>
-                <li><a href="collections.html" class="mobile-nav-link">Collections</a></li>
-                <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
-            </ul>
+            
+            <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="header-explore-btn">Get Application &#8599;</a>
         </div>
     </header>
 
     <main>
-        <!-- HERO -->
+        <!-- HERO SECTION (Full Size) -->
         <section class="hero text-center" aria-labelledby="hero-title">
-            <div class="container hero-content">
-                <span class="badge badge-primary">RETRO GAMING ARCHIVE</span>
-                <h1 id="hero-title">Experience the Golden Era of Gaming</h1>
-                <p class="hero-description">
-                    Explore 80 hand-picked classic retro games and companion guides across PS2, PSP, PS3, PSX, and Nintendo consoles.
-                </p>
-                <div class="hero-buttons">
-                    <a href="games.html" class="btn-primary">Browse All ROMs &rarr;</a>
-                    <a href="emulators.html" class="btn-outline">Explore Emulators</a>
-                </div>
+            <div class="container text-center">
+                <span class="accent-subtitle">Level Up Your Mobile Device</span>
+                <h1 id="hero-title">The Best Retro Games for Android</h1>
+                <p>Master mobile emulation. Explore 80 hand-picked classic retro games and companion guides across PS2, PSP, PS3, PSX, and Nintendo consoles.</p>
+                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" class="btn-primary" target="_blank" rel="noopener noreferrer">Get it on Google Play &#8599;</a>
+                <div class="hero-stats">1M+ downloads &bull; <span class="gold-text">&#9733; 4.2 on Google Play</span></div>
             </div>
         </section>
 
@@ -643,54 +619,33 @@
         </section>
     </main>
 
+        <!-- SIMPLIFIED FOOTER (Primary Color Pink - NO Fake Links) -->
     <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <a href="index.html" class="brand-logo" aria-label="romstofun Home">
-                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                        <polyline points="2 17 12 22 22 17"></polyline>
-                        <polyline points="2 12 12 17 22 12"></polyline>
-                    </svg>
-                    <span class="brand-text">romsto<span class="text-primary">fun</span></span>
-                </a>
-                <p class="footer-tagline">Your high-performance retro gaming and mobile emulation companion hub.</p>
-                <div class="footer-app-btn">
-                    <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="btn-footer-app">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.9 1.9 0 0 1-.22-.9V2.714a1.9 1.9 0 0 1 .22-.9zm11.24 11.244l2.094-2.095-10.87-6.275 8.776 8.37zm0 1.884l-8.776 8.37 10.87-6.275-2.094-2.095zm1.488-1.488l2.906 1.678c.848.49.848 1.288 0 1.778l-2.906 1.678-2.316-2.316 2.316-2.316z"/></svg>
-                        Get Companion App
+        <div class="container">
+            <div class="footer-simple-top">
+                <div class="footer-simple-brand">
+                    <a href="index.html" class="footer-brand-logo">
+                        <span>🎮</span> romstofun<span class="brand-highlight">.</span>
                     </a>
+                    <p class="footer-simple-desc">Your ultimate retro gaming & mobile emulation companion guide.</p>
                 </div>
-            </div>
-
-            <div class="footer-nav">
-                <h4 class="footer-heading">Navigation</h4>
-                <ul class="footer-links">
+                
+                <ul class="footer-simple-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="games.html">ROMs & Games</a></li>
-                    <li><a href="emulators.html">Active Emulators</a></li>
+                    <li><a href="games.html">Roms</a></li>
+                    <li><a href="emulators.html">Emulators</a></li>
                     <li><a href="collections.html">Collections</a></li>
-                    <li><a href="blog.html">Blog & Guides</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
+
+                <a href="https://play.google.com/store/search?q=agames&c=apps&fpr=false" target="_blank" rel="noopener noreferrer" class="footer-simple-cta">
+                    Get App on Google Play &#8599;
+                </a>
             </div>
 
-            <div class="footer-disclaimer">
-                <h4 class="footer-heading">Legal & Compliance</h4>
-                <p class="legal-text">
-                    romstofun is a preservation indexing resource and community database. No copyrighted game ROM binaries are stored, hosted, or directly transmitted from our servers. All companion tools point to verified applications available on the Google Play Store.
-                </p>
-                <div class="footer-meta-pill">
-                    <span>100% Static HTML</span>
-                    <span>SEO Ready</span>
-                    <span>Nginx Optimized</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container flex-between">
-                <p>&copy; 2026 romstofun. All rights reserved.</p>
-                <p>Designed for fast retro exploration.</p>
+            <div class="footer-simple-bottom">
+                <div>&copy; 2026 romstofun. All rights reserved. Independent retro gaming educational companion.</div>
+                <div>Game titles, characters, and trademarks belong to their respective copyright owners.</div>
             </div>
         </div>
     </footer>
