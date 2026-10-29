@@ -6,11 +6,11 @@
     'use strict';
 
     // ==========================================
-    // 1. Mobile Navigation & Accessibility
+    // 1. Mobile Navigation & Drawer
     // ==========================================
     function initNavigation() {
         const hamburgerBtn = document.querySelector('.hamburger-btn');
-        const mobileNav = document.getElementById('mobile-nav') || document.getElementById('main-nav');
+        const mobileNav = document.getElementById('mobile-nav') || document.querySelector('.main-nav');
 
         if (!hamburgerBtn || !mobileNav) return;
 
@@ -61,7 +61,7 @@
 
             const isFiltering = (selectedEmu !== 'all' || selectedColl !== 'all' || selectedSort !== 'all');
 
-            // Requirement: If filter is selected with value instead of all, hide popular emulators section
+            // Reactive requirement: Hide popular emulators showcase if any filter is active
             if (popularEmulatorsSection) {
                 popularEmulatorsSection.style.display = isFiltering ? 'none' : '';
             }
@@ -80,58 +80,72 @@
                 clearFiltersBtn.style.display = isFiltering ? 'inline-block' : 'none';
             }
 
-            // Filter pre-rendered cards in DOM
-            let matchCount = 0;
+            // Filter all pre-rendered cards
+            const matchedCards = [];
             gameCards.forEach(card => {
                 const cardEmu = (card.getAttribute('data-emulator') || '').toLowerCase();
                 const cardGenre = (card.getAttribute('data-genre') || '').toLowerCase();
                 const cardColl = (card.getAttribute('data-collection') || '').toLowerCase();
+                const isFeatured = card.getAttribute('data-featured') === 'true';
+
+                if (!isFiltering) {
+                    // Default state: display the top 12 featured cards
+                    if (isFeatured) {
+                        card.style.display = '';
+                        matchedCards.push(card);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                    return;
+                }
 
                 const emuMatch = (selectedEmu === 'all' || cardEmu === selectedEmu);
                 let collMatch = true;
-
                 if (selectedColl !== 'all') {
-                    if (selectedColl === 'fighting') {
-                        collMatch = cardGenre.includes('fight') || cardGenre.includes('battle') || cardGenre.includes('wrestl');
-                    } else if (selectedColl === 'sports') {
-                        collMatch = cardGenre.includes('sport') || cardGenre.includes('soccer') || cardGenre.includes('football');
-                    } else if (selectedColl === 'racing') {
-                        collMatch = cardGenre.includes('racing') || cardGenre.includes('driving');
-                    } else if (selectedColl === 'platform') {
-                        collMatch = cardGenre.includes('platform');
-                    } else if (selectedColl === 'rpg') {
-                        collMatch = cardGenre.includes('rpg') || cardGenre.includes('role');
-                    } else if (selectedColl === 'shooter') {
-                        collMatch = cardGenre.includes('shooter') || cardGenre.includes('shoot');
-                    } else if (selectedColl === 'horror') {
-                        collMatch = cardGenre.includes('horror') || cardGenre.includes('survival');
-                    } else if (selectedColl === 'popular') {
-                        collMatch = cardColl === 'popular';
-                    } else {
-                        collMatch = cardGenre.includes(selectedColl) || cardColl.includes(selectedColl);
-                    }
+                    collMatch = cardColl.includes(selectedColl) || cardGenre.includes(selectedColl);
                 }
 
                 if (emuMatch && collMatch) {
                     card.style.display = '';
-                    matchCount++;
+                    matchedCards.push(card);
                 } else {
                     card.style.display = 'none';
                 }
             });
 
-            // Handle empty state message
+            // Apply sorting by re-appending DOM nodes
+            if (selectedSort === 'rating') {
+                matchedCards.sort((a, b) => {
+                    const rA = parseFloat(a.getAttribute('data-rating')) || 0;
+                    const rB = parseFloat(b.getAttribute('data-rating')) || 0;
+                    return rB - rA;
+                });
+                matchedCards.forEach(c => landingGamesContainer.appendChild(c));
+            } else if (selectedSort === 'loves') {
+                matchedCards.sort((a, b) => {
+                    const lA = parseInt(a.getAttribute('data-loves')) || 0;
+                    const lB = parseInt(b.getAttribute('data-loves')) || 0;
+                    return lB - lA;
+                });
+                matchedCards.forEach(c => landingGamesContainer.appendChild(c));
+            }
+
+            // Manage empty state
             let emptyMsg = document.getElementById('home-no-results');
-            if (matchCount === 0) {
+            if (matchedCards.length === 0) {
                 if (!emptyMsg) {
                     emptyMsg = document.createElement('div');
                     emptyMsg.id = 'home-no-results';
                     emptyMsg.style.gridColumn = '1 / -1';
                     emptyMsg.style.textAlign = 'center';
-                    emptyMsg.style.padding = '3rem 1rem';
+                    emptyMsg.style.padding = '3.5rem 1rem';
                     emptyMsg.style.color = '#64748b';
-                    emptyMsg.innerHTML = '<h3 style="margin-bottom:0.5rem;color:#0f172a;">No games match your selected filters</h3><p>Try resetting filters or <a href="games.html" style="color:#e11d48;font-weight:700;">explore all 80 games &rarr;</a></p>';
+                    emptyMsg.innerHTML = '<h3 style="margin-bottom:0.5rem;color:#0f172a;font-size:1.3rem;">No games match your selected filters</h3><p style="margin-bottom:1rem;">Try clearing dropdowns or explore our entire 80-game directory.</p><button type="button" id="home-reset-btn" class="btn-primary" style="cursor:pointer;display:inline-block;">Reset All Filters</button>';
                     landingGamesContainer.appendChild(emptyMsg);
+                    document.getElementById('home-reset-btn').addEventListener('click', () => {
+                        filterSelects.forEach(s => s.selectedIndex = 0);
+                        applyHomeFilters();
+                    });
                 } else {
                     emptyMsg.style.display = 'block';
                 }
@@ -160,13 +174,65 @@
         const pillItems = Array.from(document.querySelectorAll('#emulator-pills .pill-item'));
         const searchInput = document.getElementById('game-search-input');
         const searchClear = document.getElementById('active-search-clear');
+        const btnClearSearch = document.getElementById('btn-clear-search');
         const visibleCountEl = document.getElementById('visible-games-count');
+        const totalCountEl = document.getElementById('total-games-count');
         const gameCards = Array.from(gamesGrid.querySelectorAll('.game-card'));
+
+        // Genre Banner Elements
+        const genreBanner = document.getElementById('active-genre-banner');
+        const genreBannerTitle = document.getElementById('genre-banner-title');
+        const genreBannerSubtitle = document.getElementById('genre-banner-subtitle');
+        const genreBannerIcon = document.getElementById('genre-banner-icon');
+        const resetGenreBtn = document.getElementById('reset-genre-btn');
+
+        const genreIcons = {
+            'action': '⚔️',
+            'adventure': '🗺️',
+            'classic': '🕹️',
+            'platform': '🍄',
+            'fighting': '🥊',
+            'sports': '⚽',
+            'racing': '🏎️',
+            'shooter': '🎯',
+            'rpg': '🛡️',
+            'horror': '🧟'
+        };
+
+        const knownEmulators = ['ps2', 'psp', 'ps3', 'psx', 'gba', 'nes', '3ds', 'n64', 'nds', 'snes', 'wii', 'sg'];
 
         // Parse initial URL query params or hash
         const urlParams = new URLSearchParams(window.location.search);
-        let activeFilter = (urlParams.get('emulator') || window.location.hash.replace('#', '') || 'all').toLowerCase();
+        let activeEmulator = (urlParams.get('emulator') || '').toLowerCase();
         let activeGenre = (urlParams.get('genre') || urlParams.get('collection') || '').toLowerCase();
+
+        // Handle URL Hash (e.g., #ps2, #genre-fighting, #action)
+        const hash = (window.location.hash || '').replace('#', '').toLowerCase();
+        if (hash) {
+            const cleanHash = hash.replace('genre-', '');
+            if (knownEmulators.includes(cleanHash)) {
+                activeEmulator = cleanHash;
+            } else {
+                activeGenre = cleanHash;
+            }
+        }
+
+        if (totalCountEl) {
+            totalCountEl.textContent = gameCards.length;
+        }
+
+        function updateGenreBanner(matchCount) {
+            if (!genreBanner) return;
+            if (activeGenre && activeGenre !== 'all') {
+                genreBanner.style.display = 'flex';
+                const prettyTitle = activeGenre.charAt(0).toUpperCase() + activeGenre.slice(1);
+                if (genreBannerTitle) genreBannerTitle.textContent = `${prettyTitle} Collection`;
+                if (genreBannerSubtitle) genreBannerSubtitle.textContent = `Showing ${matchCount} verified ${prettyTitle} titles across platforms`;
+                if (genreBannerIcon) genreBannerIcon.textContent = genreIcons[activeGenre] || '🎮';
+            } else {
+                genreBanner.style.display = 'none';
+            }
+        }
 
         function filterGames() {
             const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
@@ -176,11 +242,13 @@
                 const cardEmu = (card.getAttribute('data-emulator') || '').toLowerCase();
                 const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
                 const cardGenre = (card.getAttribute('data-genre') || '').toLowerCase();
+                const cardColl = (card.getAttribute('data-collection') || '').toLowerCase();
 
-                const emuMatch = (activeFilter === 'all' || activeFilter === '' || cardEmu === activeFilter);
+                const emuMatch = (!activeEmulator || activeEmulator === 'all' || cardEmu === activeEmulator);
+                
                 let genreMatch = true;
-                if (activeGenre) {
-                    genreMatch = cardGenre.includes(activeGenre);
+                if (activeGenre && activeGenre !== 'all') {
+                    genreMatch = cardColl.includes(activeGenre) || cardGenre.includes(activeGenre);
                 }
 
                 const queryMatch = !query || cardTitle.includes(query) || cardGenre.includes(query) || cardEmu.includes(query);
@@ -196,6 +264,8 @@
             if (visibleCountEl) {
                 visibleCountEl.textContent = visibleCount;
             }
+
+            updateGenreBanner(visibleCount);
 
             // Manage empty state
             let noResults = document.getElementById('games-no-results');
@@ -218,11 +288,7 @@
                     const resetBtn = document.getElementById('reset-games-filter');
                     if (resetBtn) {
                         resetBtn.addEventListener('click', () => {
-                            setActivePill('all');
-                            if (searchInput) searchInput.value = '';
-                            if (searchClear) searchClear.style.display = 'none';
-                            activeGenre = '';
-                            filterGames();
+                            resetAllFilters();
                         });
                     }
                 } else {
@@ -234,19 +300,32 @@
         }
 
         function setActivePill(filterName) {
-            activeFilter = filterName.toLowerCase();
+            activeEmulator = (!filterName || filterName === 'all') ? '' : filterName.toLowerCase();
             pillItems.forEach(pill => {
                 const f = (pill.getAttribute('data-filter') || '').toLowerCase();
-                if (f === activeFilter) {
-                    pill.classList.add('active');
-                } else {
-                    pill.classList.remove('active');
-                }
+                const isMatch = (!activeEmulator && f === 'all') || (f === activeEmulator);
+                pill.classList.toggle('active', isMatch);
             });
         }
 
+        function resetAllFilters() {
+            activeEmulator = '';
+            activeGenre = '';
+            setActivePill('all');
+            if (searchInput) searchInput.value = '';
+            if (searchClear) searchClear.style.display = 'none';
+            if (window.history.pushState) {
+                window.history.pushState(null, '', window.location.pathname);
+            }
+            filterGames();
+        }
+
+        if (resetGenreBtn) {
+            resetGenreBtn.addEventListener('click', resetAllFilters);
+        }
+
         // Initialize active pill from URL
-        setActivePill(activeFilter);
+        setActivePill(activeEmulator || 'all');
 
         // Click listeners on platform pills
         pillItems.forEach(pill => {
@@ -254,11 +333,10 @@
                 e.preventDefault();
                 const targetFilter = (pill.getAttribute('data-filter') || 'all').toLowerCase();
                 setActivePill(targetFilter);
-                activeGenre = '';
 
                 // Update hash without triggering reload
                 if (window.history.pushState) {
-                    const newHash = targetFilter === 'all' ? '' : `#${targetFilter}`;
+                    const newHash = (!activeEmulator) ? '' : `#${activeEmulator}`;
                     window.history.pushState(null, '', window.location.pathname + newHash);
                 }
 
@@ -267,19 +345,6 @@
         });
 
         // Search input handling
-        if (searchInput) {
-            let timer = null;
-            searchInput.addEventListener('input', function() {
-                clearTimeout(timer);
-                if (searchClear) {
-                    searchClear.style.display = searchInput.value ? 'block' : 'none';
-                }
-                timer = setTimeout(filterGames, 120);
-            });
-        }
-
-        const btnClearSearch = document.getElementById('btn-clear-search');
-
         function doClearSearch() {
             if (searchInput) {
                 searchInput.value = '';
@@ -289,17 +354,32 @@
             }
         }
 
-        if (searchClear) {
-            searchClear.addEventListener('click', doClearSearch);
+        if (searchInput) {
+            let timer = null;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(timer);
+                if (searchClear) {
+                    searchClear.style.display = searchInput.value ? 'block' : 'none';
+                }
+                timer = setTimeout(filterGames, 100);
+            });
         }
-        if (btnClearSearch) {
-            btnClearSearch.addEventListener('click', doClearSearch);
-        }
+
+        if (searchClear) searchClear.addEventListener('click', doClearSearch);
+        if (btnClearSearch) btnClearSearch.addEventListener('click', doClearSearch);
 
         // Popstate handler for browser back/forward buttons
         window.addEventListener('popstate', function() {
-            activeFilter = (window.location.hash.replace('#', '') || 'all').toLowerCase();
-            setActivePill(activeFilter);
+            const p = new URLSearchParams(window.location.search);
+            const h = (window.location.hash || '').replace('#', '').toLowerCase();
+            activeEmulator = (p.get('emulator') || '').toLowerCase();
+            activeGenre = (p.get('genre') || p.get('collection') || '').toLowerCase();
+            if (h) {
+                const ch = h.replace('genre-', '');
+                if (knownEmulators.includes(ch)) activeEmulator = ch;
+                else activeGenre = ch;
+            }
+            setActivePill(activeEmulator || 'all');
             filterGames();
         });
 
@@ -360,7 +440,7 @@
             let timer = null;
             searchInput.addEventListener('input', function() {
                 clearTimeout(timer);
-                timer = setTimeout(filterBlogCards, 120);
+                timer = setTimeout(filterBlogCards, 100);
             });
         }
     }
