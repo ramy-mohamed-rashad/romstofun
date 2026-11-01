@@ -1006,18 +1006,26 @@
     width: 100%;
     border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 2.25rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    background: #0f172a;
+    margin-bottom: 2rem;
+    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
     border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
 }
 
 .blog-featured-img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 440px;
+    width: auto;
     height: auto;
-    max-height: 480px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     transition: transform 0.3s ease;
 }
 
@@ -1438,13 +1446,14 @@
 
 @media (max-width: 600px) {
     .blog-featured-img-container {
-        padding: 0.75rem;
+        padding: 0.75rem 0.5rem;
         margin-bottom: 1.5rem;
         border-radius: 12px;
+        min-height: auto;
     }
 
     .blog-featured-img {
-        max-height: 260px;
+        max-height: 280px;
         border-radius: 8px;
     }
 
@@ -1760,7 +1769,7 @@
  * =================================================== */
 .game-mockup-showcase {
     margin: 2rem 0 3rem 0;
-    padding: 2rem 1.75rem;
+    padding: 2rem 1.5rem;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 20px;
@@ -1769,11 +1778,11 @@
 
 .mockup-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 }
 
 .mockup-header h3 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     color: #0f172a;
     margin-bottom: 0.5rem;
     font-weight: 700;
@@ -1782,33 +1791,35 @@
 .mockup-header p {
     font-size: 0.95rem;
     color: #64748b;
-    margin: 0;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    max-width: 600px;
     line-height: 1.5;
 }
 
-.mockup-images-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: flex-start;
+.mockup-single-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
-.mockup-image-card {
+.mockup-single-container .mockup-image-card {
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 640px;
 }
 
 .mockup-phone-img {
     width: 100%;
-    max-width: 460px;
+    max-width: 620px;
     height: auto;
     display: block;
+    margin: 0 auto;
     filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.22));
     transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -1820,7 +1831,7 @@
 
 .mockup-caption {
     margin-top: 1rem;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: #475569;
     line-height: 1.45;
 }
@@ -1829,26 +1840,23 @@
     color: #0f172a;
 }
 
-/* Responsive adjustments for Mockup Showcase */
-@media (max-width: 900px) {
-    .mockup-images-grid {
+/* Responsive adjustments for Mockup Showcase & Emulation Settings */
+@media (max-width: 768px) {
+    .emulation-settings-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .mockup-phone-img {
-        max-width: 520px;
+        gap: 0.75rem;
     }
 }
 
 @media (max-width: 600px) {
     .game-mockup-showcase {
-        padding: 1.25rem 1rem;
+        padding: 1.25rem 0.85rem;
         margin: 1.5rem 0 2rem 0;
         border-radius: 14px;
     }
 
     .mockup-header {
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .mockup-header h3 {
@@ -1859,12 +1867,30 @@
         font-size: 0.85rem;
     }
 
-    .mockup-images-grid {
-        gap: 1.5rem;
+    .mockup-phone-img {
+        max-width: 100%;
     }
 
     .mockup-caption {
         font-size: 0.82rem;
+    }
+
+    .hero.hero-compact h1 {
+        font-size: clamp(1.35rem, 5vw, 2rem);
+        line-height: 1.25;
+        word-break: break-word;
+    }
+
+    .hero-breadcrumb {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem;
+        font-size: 0.78rem;
+    }
+
+    .blog-article {
+        padding: 1.25rem 0.85rem !important;
+        border-radius: 12px;
     }
 
     .technical-settings-list li strong {
