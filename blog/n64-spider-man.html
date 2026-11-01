@@ -96,64 +96,116 @@
                     <article class="blog-article">
                         <div class="blog-meta-header">
                             <span class="meta-pill platform">🎮 N64</span>
-                            <span class="meta-pill genre">🏷️ Adventure</span>
-                            <span class="meta-pill date">📅 October 2026</span>
-                            <span class="meta-pill read-time">⏱️ 5 min read</span>
+                            <span class="meta-pill genre">⚔️ Adventure</span>
+                            <span class="meta-pill date">📅 November 2026</span>
+                            <span class="meta-pill read-time">⏱️ 6 min read</span>
                         </div>
 
-                        <img src="../assets/images/games/n64_162471_spider-man.jpg" alt="Spider-Man" class="blog-featured-img" loading="eager" decoding="async">
+                        <!-- PHOTOREALISTIC SMARTPHONE MOCKUP -->
+                        <figure class="phone-mockup-wrapper">
+                            <div class="phone-mockup-container">
+                                <div class="phone-glow"></div>
+                                <div class="phone-chassis">
+                                    <div class="phone-speaker"></div>
+                                    <div class="phone-camera-hole"></div>
+                                    <div class="phone-screen">
+                                        <img src="../assets/images/games/n64_162471_spider-man.jpg" alt="A photorealistic mockup of a modern, bezel-less Android smartphone held horizontally. On the smartphone screen, a vibrant, high-resolution gameplay screenshot of Spider-Man Nintendo 64 is playing. Overlaid directly on top of the game screen are translucent, glowing white virtual emulator buttons: a digital D-pad on the left side, and four circular action buttons on the right side. The phone is set against a clean, minimalist dark studio background with dramatic lighting highlighting the screen. 8k, highly detailed, realistic mobile gaming concept." class="mockup-game-img" loading="eager" decoding="async">
+                                        <div class="screen-glare"></div>
+                                        <div class="virtual-touch-controls">
+                                            <!-- Left: Translucent Glowing Digital D-Pad -->
+                                            <div class="touch-dpad">
+                                                <span class="dpad-btn dpad-up">▲</span>
+                                                <div class="dpad-middle">
+                                                    <span class="dpad-btn dpad-left">◀</span>
+                                                    <span class="dpad-center"></span>
+                                                    <span class="dpad-btn dpad-right">▶</span>
+                                                </div>
+                                                <span class="dpad-btn dpad-down">▼</span>
+                                            </div>
+
+                                            <!-- Center: 60.0 FPS Performance HUD -->
+                                            <div class="touch-hud-center">
+                                                <span class="hud-fps-pill">60.0 FPS • GlideN64 • 1080p</span>
+                                            </div>
+
+                                            <!-- Right: Translucent Glowing Action Buttons -->
+                                            <div class="touch-action-cluster">
+                                                <span class="touch-btn btn-top"><span>C▲</span></span>
+                                                <div class="action-btn-row-middle">
+                                                    <span class="touch-btn btn-left"><span>C◀</span></span>
+                                                    <span class="touch-btn btn-right"><span>A</span></span>
+                                                </div>
+                                                <span class="touch-btn btn-bottom"><span>B</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="mockup-caption">
+                                <span class="mockup-caption-tag">Mobile Emulation Showcase</span>
+                                Vulkan-accelerated 60 FPS viewport with calibrated capacitive glassmorphism overlay controls
+                            </figcaption>
+                        </figure>
 
                         <h2>1. Legacy & Historical Context</h2>
-                        <p>
-                            Spider-Man stands as one of the most memorable and celebrated experiences on the N64 platform. First emerging in 2000, the title captivated players worldwide through its distinctive design, memorable atmosphere, and technical prowess that pushed the system to its full capacity.
-                        </p>
-                        <p>
-                            Boasting an average community score of 3.63 out of 5 and cherished by 125 registered fans, Spider-Man continues to hold a revered spot in retro gaming history. Whether revisited for nostalgia or explored for the first time, its legacy remains undisputed.
-                        </p>
+                        <p>Spider-Man represents an ambitious technical endeavor for the N64, pushing the graphics synthesizer and audio processors to deliver fast action, memorable art direction, and challenging gameplay loops.</p>
+                        <p>Modern Android emulation elevates Spider-Man with crystal-clear 1080p internal resolution upscaling, stable 60 FPS frame pacing, and instant quick-saves that breathe fresh life into this retro classic.</p>
 
-                        <div class="blog-callout">
-                            <h4>Why Play on Android?</h4>
-                            <p>
-                                On modern Android devices, Spider-Man benefits from high-definition upscaling, stable 60 FPS performance, quick-save states, and tactile controller integration through recommended mobile emulator setups.
-                            </p>
-                        </div>
+                        <h2>2. Optimal Mobile Emulation Settings</h2>
+                        <p>To achieve an uncompromising 60 FPS experience with zero thermal throttling on modern Qualcomm Snapdragon processors (e.g., Snapdragon 778G, 8+ Gen 1, 8 Gen 2, and 8 Gen 3), apply the following tuned configuration inside Mupen64Plus FZ:</p>
 
-                        <h2>2. Gameplay Mechanics & Visuals</h2>
-                        <p>
-                            Categorized under the Adventure genre, the gameplay loop strikes an engaging balance between challenging mechanics and rewarding progression. Level pacing, responsive handling, and finely crafted scenarios keep the experience fresh from start to finish.
-                        </p>
-                        <p>
-                            Visually, the art direction showcases the distinctive charm of the N64 era. Character models, animations, and sound effects work in harmony to deliver an enduring cinematic experience.
-                        </p>
-
-                        <h2>3. Optimal Mobile Emulation Settings</h2>
-                        <p>
-                            To ensure the smoothest performance without battery drain or overheating, our team recommends the following settings on Android devices:
-                        </p>
                         <div class="emulation-settings-grid">
                             <div class="setting-item">
                                 <span class="setting-label">Backend Renderer</span>
-                                <span class="setting-value">Vulkan (Fastest) / OpenGL</span>
+                                <span class="setting-value">GlideN64 Accurate (GLES 3.1)</span>
                             </div>
                             <div class="setting-item">
                                 <span class="setting-label">Internal Resolution</span>
-                                <span class="setting-value">2x (1080p) Mid / 3x Flagship</span>
+                                <span class="setting-value">1080p Display Resolution</span>
                             </div>
                             <div class="setting-item">
                                 <span class="setting-label">Texture Filtering</span>
-                                <span class="setting-value">Linear / Bicubic Crisp</span>
+                                <span class="setting-value">Bilinear Smoothing • Per-Pixel Lighting</span>
                             </div>
                             <div class="setting-item">
                                 <span class="setting-label">Audio Latency</span>
-                                <span class="setting-value">Medium / Low (Zero Stutter)</span>
+                                <span class="setting-value">OpenSL ES (Buffer: 1024 Samples)</span>
                             </div>
                             <div class="setting-item">
-                                <span class="setting-label">Controller Profiles</span>
-                                <span class="setting-value">Bluetooth Xbox, DualSense, Kishi</span>
+                                <span class="setting-label">CPU / Hardware Optimization</span>
+                                <span class="setting-value">Native Resolution Framebuffer • Dynamic Recompiler</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Target Framerate</span>
+                                <span class="setting-value">Locked 60 FPS (100% Speed)</span>
                             </div>
                         </div>
 
-                        <h2>4. Final Verdict & Review Score</h2>
+                        <ul class="technical-settings-list">
+                            <li><strong>Backend Renderer:</strong> Select the GlideN64 Accurate emulation profile. GlideN64 accurately calculates microcode polygon clipping and depth calculations on Android Adreno hardware.</li>
+                            <li><strong>Internal Resolution:</strong> Set Display Resolution to 1080p (4x original 240p). The Reality Coprocessor textures scale cleanly to modern mobile displays with crisp polygon edges.</li>
+                            <li><strong>Texture Filtering & Upscaling:</strong> Enable N64 3-Point Bilinear filtering to preserve original aesthetic blending, and turn on "Per-Pixel Lighting" in shader settings for enhanced shadow gradation.</li>
+                            <li><strong>Audio Driver & Latency:</strong> Use OpenSL ES with Audio Buffer set to 1024 samples (16ms). This guarantees responsive retro audio with zero pops or sync drift.</li>
+                            <li><strong>CPU Multithreading & Sync:</strong> Keep Dynamic Recompiler active and enable Native Resolution Framebuffer to ensure in-game sub-screens, split screens, and jumbotrons render accurately.</li>
+                        </ul>
+
+                        <h2>3. Known Graphical Fixes & Emulation Patches</h2>
+    <div class="glitch-fix-box">
+        <h4>Jumbotron / Sub-Screen Rendering Failure</h4>
+        <p><strong>The Issue:</strong> In-game video boards and mini-map overlays fail to render or appear as solid black rectangles in standard fast video plugins.</p>
+        <p><strong>The Fix:</strong> Select the "GlideN64 Accurate" profile in Mupen64Plus FZ and check "Copy Color to RDRAM" in Video Settings.</p>
+    </div>
+    <div class="glitch-fix-box">
+        <h4>Distant Fog Clipping & Wall Jitter</h4>
+        <p><strong>The Issue:</strong> Low precision Z-buffering can cause distant scenery to clip through atmospheric fog unnaturally.</p>
+        <p><strong>The Fix:</strong> Set "Depth Buffer Resolution" to 24-bit in GlideN64 settings and enable "Per-Pixel Lighting".</p>
+    </div>
+
+                        <h2>4. Touch Controls vs. Bluetooth Gamepads</h2>
+                        <p>Navigating intense action sequences and camera panning in Spider-Man via capacitive touch controls works reliably when using a customized on-screen layout. Placing the virtual thumbstick slightly closer to the lower screen edge and scaling action buttons to 110% ensures comfortable reach without obstructing on-screen visual hazards.</p>
+                        <p>For extended gaming sessions and demanding boss encounters, snapping your smartphone into a USB-C telescopic gamepad (such as the Razer Kishi or GameSir G8) or syncing a Bluetooth PlayStation DualSense controller provides authentic tactile feedback. Physical analog sticks and textured shoulder bumpers eliminate thumb fatigue and grant flawless precision control.</p>
+
+                        <h2>5. Final Verdict & Review Score</h2>
                         <div class="blog-score-box">
                             <div class="blog-score-info">
                                 <h3>Overall romstofun Score</h3>

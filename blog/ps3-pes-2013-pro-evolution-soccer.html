@@ -96,64 +96,116 @@
                     <article class="blog-article">
                         <div class="blog-meta-header">
                             <span class="meta-pill platform">🎮 PS3</span>
-                            <span class="meta-pill genre">🏷️ Classic</span>
-                            <span class="meta-pill date">📅 October 2026</span>
-                            <span class="meta-pill read-time">⏱️ 5 min read</span>
+                            <span class="meta-pill genre">⚔️ Classic</span>
+                            <span class="meta-pill date">📅 November 2026</span>
+                            <span class="meta-pill read-time">⏱️ 6 min read</span>
                         </div>
 
-                        <img src="../assets/images/games/ps3_164532_pes-2013-pro-evolution-soccer.png" alt="PES 2013 - Pro Evolution Soccer" class="blog-featured-img" loading="eager" decoding="async">
+                        <!-- PHOTOREALISTIC SMARTPHONE MOCKUP -->
+                        <figure class="phone-mockup-wrapper">
+                            <div class="phone-mockup-container">
+                                <div class="phone-glow"></div>
+                                <div class="phone-chassis">
+                                    <div class="phone-speaker"></div>
+                                    <div class="phone-camera-hole"></div>
+                                    <div class="phone-screen">
+                                        <img src="../assets/images/games/ps3_164532_pes-2013-pro-evolution-soccer.png" alt="A photorealistic mockup of a modern, bezel-less Android smartphone held horizontally. On the smartphone screen, a vibrant, high-resolution gameplay screenshot of PES 2013 - Pro Evolution Soccer PlayStation 3 is playing. Overlaid directly on top of the game screen are translucent, glowing white virtual emulator buttons: a digital D-pad on the left side, and four circular action buttons on the right side. The phone is set against a clean, minimalist dark studio background with dramatic lighting highlighting the screen. 8k, highly detailed, realistic mobile gaming concept." class="mockup-game-img" loading="eager" decoding="async">
+                                        <div class="screen-glare"></div>
+                                        <div class="virtual-touch-controls">
+                                            <!-- Left: Translucent Glowing Digital D-Pad -->
+                                            <div class="touch-dpad">
+                                                <span class="dpad-btn dpad-up">▲</span>
+                                                <div class="dpad-middle">
+                                                    <span class="dpad-btn dpad-left">◀</span>
+                                                    <span class="dpad-center"></span>
+                                                    <span class="dpad-btn dpad-right">▶</span>
+                                                </div>
+                                                <span class="dpad-btn dpad-down">▼</span>
+                                            </div>
+
+                                            <!-- Center: 60.0 FPS Performance HUD -->
+                                            <div class="touch-hud-center">
+                                                <span class="hud-fps-pill">60.0 FPS • Vulkan • FSR</span>
+                                            </div>
+
+                                            <!-- Right: Translucent Glowing Action Buttons -->
+                                            <div class="touch-action-cluster">
+                                                <span class="touch-btn btn-top"><span>△</span></span>
+                                                <div class="action-btn-row-middle">
+                                                    <span class="touch-btn btn-left"><span>□</span></span>
+                                                    <span class="touch-btn btn-right"><span>○</span></span>
+                                                </div>
+                                                <span class="touch-btn btn-bottom"><span>✕</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="mockup-caption">
+                                <span class="mockup-caption-tag">Mobile Emulation Showcase</span>
+                                Vulkan-accelerated 60 FPS viewport with calibrated capacitive glassmorphism overlay controls
+                            </figcaption>
+                        </figure>
 
                         <h2>1. Legacy & Historical Context</h2>
-                        <p>
-                            PES 2013 - Pro Evolution Soccer stands as one of the most memorable and celebrated experiences on the PS3 platform. First emerging in 2012, the title captivated players worldwide through its distinctive design, memorable atmosphere, and technical prowess that pushed the system to its full capacity.
-                        </p>
-                        <p>
-                            Boasting an average community score of 4.64 out of 5 and cherished by 1,504 registered fans, PES 2013 - Pro Evolution Soccer continues to hold a revered spot in retro gaming history. Whether revisited for nostalgia or explored for the first time, its legacy remains undisputed.
-                        </p>
+                        <p>PES 2013 - Pro Evolution Soccer pushed the computational limits of the PS3 by staging complex multi-entity physics, detailed stadium crowds, high-speed motion blur, and realistic collision models under rigorous 60 FPS performance targets.</p>
+                        <p>Emulating this sports and racing tour-de-force on modern Snapdragon chips provides locked 60 FPS fluidity, enhanced anti-aliasing, and zero frame stuttering, making every overtake and game-winning goal crisp and immersive.</p>
 
-                        <div class="blog-callout">
-                            <h4>Why Play on Android?</h4>
-                            <p>
-                                On modern Android devices, PES 2013 - Pro Evolution Soccer benefits from high-definition upscaling, stable 60 FPS performance, quick-save states, and tactile controller integration through recommended mobile emulator setups.
-                            </p>
-                        </div>
+                        <h2>2. Optimal Mobile Emulation Settings</h2>
+                        <p>To achieve an uncompromising 60 FPS experience with zero thermal throttling on modern Qualcomm Snapdragon processors (e.g., Snapdragon 778G, 8+ Gen 1, 8 Gen 2, and 8 Gen 3), apply the following tuned configuration inside RPCS3 Virtualization:</p>
 
-                        <h2>2. Gameplay Mechanics & Visuals</h2>
-                        <p>
-                            Categorized under the Classic genre, the gameplay loop strikes an engaging balance between challenging mechanics and rewarding progression. Level pacing, responsive handling, and finely crafted scenarios keep the experience fresh from start to finish.
-                        </p>
-                        <p>
-                            Visually, the art direction showcases the distinctive charm of the PS3 era. Character models, animations, and sound effects work in harmony to deliver an enduring cinematic experience.
-                        </p>
-
-                        <h2>3. Optimal Mobile Emulation Settings</h2>
-                        <p>
-                            To ensure the smoothest performance without battery drain or overheating, our team recommends the following settings on Android devices:
-                        </p>
                         <div class="emulation-settings-grid">
                             <div class="setting-item">
                                 <span class="setting-label">Backend Renderer</span>
-                                <span class="setting-value">Vulkan (Fastest) / OpenGL</span>
+                                <span class="setting-value">Vulkan Spir-V Pipeline</span>
                             </div>
                             <div class="setting-item">
                                 <span class="setting-label">Internal Resolution</span>
-                                <span class="setting-value">2x (1080p) Mid / 3x Flagship</span>
+                                <span class="setting-value">100% (720p) + FSR Upscaler</span>
                             </div>
                             <div class="setting-item">
                                 <span class="setting-label">Texture Filtering</span>
-                                <span class="setting-value">Linear / Bicubic Crisp</span>
+                                <span class="setting-value">16x Anisotropic Filtering</span>
                             </div>
                             <div class="setting-item">
                                 <span class="setting-label">Audio Latency</span>
-                                <span class="setting-value">Medium / Low (Zero Stutter)</span>
+                                <span class="setting-value">Cubeb Low Latency (Buffer: 100ms)</span>
                             </div>
                             <div class="setting-item">
-                                <span class="setting-label">Controller Profiles</span>
-                                <span class="setting-value">Bluetooth Xbox, DualSense, Kishi</span>
+                                <span class="setting-label">CPU / Hardware Optimization</span>
+                                <span class="setting-value">SPU Block Size: Safe • Multi-Threaded RSX</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Target Framerate</span>
+                                <span class="setting-value">Locked 60 FPS (100% Speed)</span>
                             </div>
                         </div>
 
-                        <h2>4. Final Verdict & Review Score</h2>
+                        <ul class="technical-settings-list">
+                            <li><strong>Backend Renderer:</strong> Vulkan is mandatory. The complex Cell Broadband Engine multi-threading requires Asynchronous Shader Compilation to avoid severe shader compilation stuttering during intense combat.</li>
+                            <li><strong>Internal Resolution:</strong> Render at 100% native resolution (720p) paired with AMD FidelityFX Super Resolution (FSR) set to 80% sharpening for optimal performance-to-fidelity balance on Snapdragon 8 Gen 2/3.</li>
+                            <li><strong>Texture Filtering & Upscaling:</strong> Force 16x Anisotropic Filtering to eliminate texture blurring at steep angles. Ensure "Strict Rendering Mode" is kept disabled unless specific lighting passes fail.</li>
+                            <li><strong>Audio Driver & Latency:</strong> Set Audio Out to Cubeb with Buffer Duration at 100ms. Set "Enable Time Stretching" to True to prevent audio chopping when the Cell SPU threads hit peak load.</li>
+                            <li><strong>CPU Multithreading & Sync:</strong> Set SPU Block Size to "Safe" and enable "Multi-Threaded RSX". Allocate at least 6 CPU execution threads to the SPU recompiler to maintain physics synchronization.</li>
+                        </ul>
+
+                        <h2>3. Known Graphical Fixes & Emulation Patches</h2>
+    <div class="glitch-fix-box">
+        <h4>SPU Vertex Cache Explosion & Lighting Glitches</h4>
+        <p><strong>The Issue:</strong> Missing or desynchronized SPU instruction caches can cause sudden vertex spikes or flashing black blocks across complex lighting passes.</p>
+        <p><strong>The Fix:</strong> Enable "Write Color Buffers (WCB)" and "Write Depth Buffers (WDB)" in RPCS3 GPU settings. Set SPU Block Size to "Safe".</p>
+    </div>
+    <div class="glitch-fix-box">
+        <h4>Shader Compilation Micro-Stuttering</h4>
+        <p><strong>The Issue:</strong> Heavy explosions and dynamic physics can induce momentary hitching as new shaders compile into memory.</p>
+        <p><strong>The Fix:</strong> Enable "Asynchronous Shader Compilation" and configure "Driver Wake-Up Delay" to 200 microseconds for stable physics thread pacing.</p>
+    </div>
+
+                        <h2>4. Touch Controls vs. Bluetooth Gamepads</h2>
+                        <p>Navigating intense action sequences and camera panning in PES 2013 - Pro Evolution Soccer via capacitive touch controls works reliably when using a customized on-screen layout. Placing the virtual thumbstick slightly closer to the lower screen edge and scaling action buttons to 110% ensures comfortable reach without obstructing on-screen visual hazards.</p>
+                        <p>For extended gaming sessions and demanding boss encounters, snapping your smartphone into a USB-C telescopic gamepad (such as the Razer Kishi or GameSir G8) or syncing a Bluetooth PlayStation DualSense controller provides authentic tactile feedback. Physical analog sticks and textured shoulder bumpers eliminate thumb fatigue and grant flawless precision control.</p>
+
+                        <h2>5. Final Verdict & Review Score</h2>
                         <div class="blog-score-box">
                             <div class="blog-score-info">
                                 <h3>Overall romstofun Score</h3>

@@ -1739,3 +1739,314 @@
     font-size: 1.75rem;
     border: 1px solid rgba(235, 35, 95, 0.2);
 }
+
+
+/* ==========================================
+ * Photorealistic Smartphone Emulation Mockup
+ * ========================================== */
+.phone-mockup-wrapper {
+    margin: 0 0 2.5rem 0;
+    padding: 2.5rem 1.5rem;
+    background: radial-gradient(ellipse at 50% 50%, #1e293b 0%, #0a0f1d 70%, #020617 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-mockup-container {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.phone-glow {
+    position: absolute;
+    inset: -15px;
+    background: radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.25) 0%, rgba(59, 130, 246, 0.15) 50%, transparent 75%);
+    filter: blur(28px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.phone-chassis {
+    position: relative;
+    z-index: 2;
+    background: #0f172a;
+    border-radius: 36px;
+    padding: 10px;
+    border: 2px solid #334155;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 12px rgba(0, 0, 0, 0.9);
+}
+
+.phone-speaker {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 32px;
+    background: #1e293b;
+    border-radius: 2px;
+}
+
+.phone-camera-hole {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px #000;
+}
+
+.phone-screen {
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #000000;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.mockup-game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.screen-glare {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 35%, transparent 55%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.virtual-touch-controls {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.75rem;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.touch-dpad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.dpad-middle {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.dpad-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 11px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35), inset 0 0 6px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    user-select: none;
+}
+
+.dpad-center {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+}
+
+.touch-hud-center {
+    align-self: flex-start;
+    margin-top: -0.25rem;
+}
+
+.hud-fps-pill {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    color: #4ade80;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.25);
+    letter-spacing: 0.04em;
+}
+
+.touch-action-cluster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.action-btn-row-middle {
+    display: flex;
+    gap: 24px;
+}
+
+.touch-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 13px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35), inset 0 0 6px rgba(255, 255, 255, 0.25);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    user-select: none;
+}
+
+.mockup-caption {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.mockup-caption-tag {
+    background: rgba(225, 29, 72, 0.15);
+    border: 1px solid rgba(225, 29, 72, 0.35);
+    color: #f43f5e;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Technical Settings List & Glitch Box Styles */
+.technical-settings-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.technical-settings-list li {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.technical-settings-list li strong {
+    color: #0f172a;
+    display: inline-block;
+    min-width: 180px;
+}
+
+.glitch-fix-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-left: 4px solid #16a34a;
+    border-radius: 0 10px 10px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+}
+
+.glitch-fix-box h4 {
+    color: #15803d;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.glitch-fix-box p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+.glitch-fix-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsiveness for Phone Mockup */
+@media (max-width: 600px) {
+    .phone-mockup-wrapper {
+        padding: 1.25rem 0.75rem;
+        border-radius: 14px;
+    }
+    .phone-chassis {
+        border-radius: 22px;
+        padding: 6px;
+    }
+    .phone-screen {
+        border-radius: 16px;
+    }
+    .virtual-touch-controls {
+        padding: 0.6rem 0.8rem;
+    }
+    .dpad-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 9px;
+    }
+    .dpad-center {
+        width: 20px;
+        height: 20px;
+    }
+    .touch-btn {
+        width: 27px;
+        height: 27px;
+        font-size: 10px;
+    }
+    .action-btn-row-middle {
+        gap: 12px;
+    }
+    .hud-fps-pill {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.45rem;
+    }
+    .technical-settings-list li strong {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+}
